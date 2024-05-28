@@ -17,9 +17,9 @@ tsv = pd.read_csv("participants.tsv", sep="\t")
 tsv.set_index('participant_id', inplace=True)
 
 for sub in tsv.index:
-    ses_labs = {"ses-1" : "ses-nn", 
-                "ses-2" : "ses-tsd", 
-                "ses-3" : "ses-rc"}
+    ses_labs = {"ses-nn" : "ses-bl", 
+                "ses-tsd" : "ses-sd", 
+                "ses-rc" : "ses-rc"}
     
     for ses in ses_labs.keys():
         for ext in ['nii.gz','json']:
